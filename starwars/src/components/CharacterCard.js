@@ -9,7 +9,7 @@ const CharacterCard = props => (
         <Button color="primary" id="toggler" style={{ marginBottom: '1rem' }}>Toggle</Button>
         <UncontrolledCollapse toggler="#toggler"> 
         <Card>
-            <CardBody>
+            <CardBody className='card-body'>
             <p>Year of Birth: {props.birth_year}</p>
             <p>Height: {props.height}cm</p>
             <p>Mass: {props.mass}kg</p>
@@ -22,7 +22,6 @@ const CharacterCard = props => (
         </Card>
         </UncontrolledCollapse>
     </div>
-
-)
+);
 
 export default CharacterCard;

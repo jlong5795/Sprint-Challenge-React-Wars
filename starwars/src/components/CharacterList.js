@@ -4,12 +4,10 @@ import CharacterCard from './CharacterCard';
 
 const CharacterList = () => {
     const [peopleList, setPeopleList] = useState([]);
-
+    
     useEffect(() => {
         axios.get('https://swapi.co/api/people/')
             .then(response => {
-            
-            //console.log('data i want', response.data.results);
             setPeopleList(response.data.results);
             })//end of .then
 
@@ -19,19 +17,12 @@ const CharacterList = () => {
         }, []);//end of useEffect
 
         return(
-            <div className='characters'>
+           <div className='characters'>
                 {peopleList.map(element => {
                     return (
             <CharacterCard key={element.name} name={element.name} height={element.height} mass={element.mass} gender={element.gender} hair_color={element.hair_color} skin_color={element.skin_color} eye_color={element.eye_color} birth_year={element.birth_year}/>)})}
             </div>
         )
-
 }
-
-        
-        
-    
-    
-
 
 export default CharacterList;
