@@ -6,3 +6,13 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.character-card {
+  max-width: 30%;
+  border: solid white 1px;
+  border-radius: 5%;
+  margin: auto;
+  
+}
+
+
